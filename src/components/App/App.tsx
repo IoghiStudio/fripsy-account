@@ -36,7 +36,7 @@ const posts = [
 ];
 
 export const App: React.FC = () => {
-  const [signIn, setSignIn] = useState(true);
+  const [signIn, setSignIn] = useState(false);
   const [signInPressed, setSignInPressed] = useState(false);
   const [username, setUsername] = useState('Denisa');
   const [newPosts] = useState(posts);
@@ -55,20 +55,22 @@ export const App: React.FC = () => {
   return (
     <div className='app'>
       <header className='header'>
-        <div className='header__input'>
-          <label htmlFor="searchField">
-            Search: 
-          </label>
-          <input
-            className='header__searchField' 
-            type="text"
-            id='searchField'
-            value={searchField}
-            onChange={(e) => {
-              setSearchField(e.target.value)
-            }}
-          />
-        </div>
+        {signIn && !showProfile && (
+          <div className='header__input'>
+            <label htmlFor="searchField">
+              Search: 
+            </label>
+            <input
+              className='header__searchField' 
+              type="text"
+              id='searchField'
+              value={searchField}
+              onChange={(e) => {
+                setSearchField(e.target.value)
+              }}
+            />
+          </div>
+        )}
 
   
         {signIn
