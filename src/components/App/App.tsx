@@ -94,7 +94,7 @@ export const App: React.FC = () => {
           )}
       </header>
 
-      {(signInPressed && !signIn) && (
+      {signInPressed && !signIn && (
         <div className='form'>
           <form
             onSubmit={(e) => {
