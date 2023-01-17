@@ -70,7 +70,7 @@ body {
   padding: 30px 60px;
   
   &__content {
-    height: 100vh;
+    min-height: 100vh;
     padding: 20px;
     background-color: rgb(212, 171, 228);
     border-radius: 50px;
@@ -78,7 +78,6 @@ body {
   
 
   &__title {
-
     text-align: center;
   }
 }

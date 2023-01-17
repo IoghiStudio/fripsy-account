@@ -22,8 +22,16 @@ const posts = [
     title: 'Tech news',
     message: 'IoghiStudio #1! on leaderboard',
   },
-  
-
+  {
+    id: 5,
+    title: 'Animated movies 2023',
+    message: 'Kung fu panda!!!!',
+  },
+  {
+    id: 6,
+    title: 'Reteta de prajitura',
+    message: 'Lapte oua si smantana nu mai mananc niciodata',
+  },
 ];
 
 export const App: React.FC = () => {
@@ -31,6 +39,16 @@ export const App: React.FC = () => {
   const [signInPressed, setSignInPressed] = useState(false);
   const [username, setUsername] = useState('');
   const [newPosts] = useState(posts);
+  const [searchField, setSearchField] = useState('');
+
+  let visibleNewPosts = newPosts;
+
+  if (searchField) {
+    visibleNewPosts = newPosts.filter(post => {
+      return post.title.toLowerCase().includes(searchField.toLowerCase())
+    })
+  }
+
 
   return (
     <div className='app'>
@@ -43,6 +61,10 @@ export const App: React.FC = () => {
             className='header__searchField' 
             type="text"
             id='searchField'
+            value={searchField}
+            onChange={(e) => {
+              setSearchField(e.target.value)
+            }}
           />
         </div>
 
@@ -99,11 +121,11 @@ export const App: React.FC = () => {
         <main className='main'>
           <div className='main__content'>
             <h1 className='main__title'>
-              Top Daily Recipes
+              Top Daily News
             </h1>
 
             <div className='postList'>
-              {newPosts.map(post => (
+              {visibleNewPosts.map(post => (
                 <div
                   className='postItem'
                   key={post.id}
