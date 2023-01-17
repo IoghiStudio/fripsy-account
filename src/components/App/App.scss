@@ -43,6 +43,7 @@ body {
   transition-duration: 700ms, 700ms;
 
   &:hover {
+    border-width: 2px;
     border-color: gold;
     border-radius: 20px;
     transform: scale(1.2);
