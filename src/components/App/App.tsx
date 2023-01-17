@@ -133,7 +133,7 @@ export const App: React.FC = () => {
         </div>
       )}
 
-      {(signIn && !showProfile) && (
+      {signIn && !showProfile && (
         <main className='main'>
           <div className='main__content'>
             <h1 className='main__title'>
