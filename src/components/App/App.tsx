@@ -11,7 +11,7 @@ const posts = [
   {
     id: 2,
     title: 'Bodybuilding',
-    message: 'Nicusor is the best!',
+    message: 'Nicusor is the best !',
   },
   {
     id: 3,
