@@ -155,7 +155,7 @@ export const App: React.FC = () => {
         </main>
       )}
 
-      {(!signIn && !signInPressed) && (
+      {!signIn && !signInPressed && (
         <p className='notSignedIn'>You should sign in</p>
       )}
     </div>
