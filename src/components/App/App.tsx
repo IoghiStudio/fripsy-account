@@ -1,3 +1,4 @@
+import { sign } from 'crypto';
 import React, { useState } from 'react';
 import './App.scss';
 
@@ -37,9 +38,10 @@ const posts = [
 export const App: React.FC = () => {
   const [signIn, setSignIn] = useState(true);
   const [signInPressed, setSignInPressed] = useState(false);
-  const [username, setUsername] = useState('');
+  const [username, setUsername] = useState('Denisa');
   const [newPosts] = useState(posts);
   const [searchField, setSearchField] = useState('');
+  const [showProfile, setShowProfile] = useState(false);
 
   let visibleNewPosts = newPosts;
 
@@ -71,7 +73,14 @@ export const App: React.FC = () => {
   
         {signIn
           ? (
-            <p >Welcome {username}</p>
+            <p
+              className='welcomeText'
+              onClick={() => {
+                setShowProfile(true);
+              }}
+            >
+              Welcome {username}
+            </p>
           ) : (
             <button
               className='header__signin'
@@ -84,7 +93,6 @@ export const App: React.FC = () => {
             </button>
           )}
       </header>
-
 
       {(signInPressed && !signIn) && (
         <div className='form'>
@@ -117,7 +125,15 @@ export const App: React.FC = () => {
         </div>
       )}
 
-      {signIn && (
+      {(signIn && showProfile) && (
+        <div className='profile'>
+          <h1 className='profile__title'>
+            {username} profile
+          </h1>
+        </div>
+      )}
+
+      {(signIn && !showProfile) && (
         <main className='main'>
           <div className='main__content'>
             <h1 className='main__title'>

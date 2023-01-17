@@ -19,8 +19,19 @@ body {
 
 .postList {
   text-align: center;
-  width: 400px;
+  width: 300px;
   margin: 0 auto;
+}
+
+.welcomeText {
+  margin-right: 30px;
+  cursor: pointer;
+  padding: 25px 10px;
+  transition: color 500ms;
+
+  &:hover {
+    color: aqua;
+  }
 }
 
 .postItem {
@@ -28,6 +39,11 @@ body {
   margin: 30px 0;
   border: 1px solid purple;
   border-radius: 4px;
+  transition: transform 500ms;
+
+  &:hover {
+    transform: scale(1.2);
+  }
 }
 
 .header {
@@ -37,9 +53,11 @@ body {
   height: 100px;
   background-color: rgb(0, 0, 0);
   color: #fff;
+  transition: background-color 500ms;
+  
 
   &:hover {
-    background-color: rgb(41, 36, 36);
+    background-color: rgb(31, 71, 55);
   }
 
   &__input {
