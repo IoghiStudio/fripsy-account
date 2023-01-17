@@ -17,11 +17,17 @@ body {
 
 }
 
-.recipeList {
+.postList {
   text-align: center;
-  background-color: aquamarine;
   width: 400px;
   margin: 0 auto;
+}
+
+.postItem {
+  background-color: #fff;
+  margin: 30px 0;
+  border: 1px solid purple;
+  border-radius: 4px;
 }
 
 .header {

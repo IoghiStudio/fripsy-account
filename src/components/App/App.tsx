@@ -4,37 +4,37 @@ import './App.scss';
 const posts = [
   {
     id: 1,
-    title: 'Negrese',
-    imageUrl: '../../images/negreasa.jpg',
+    title: 'Meteo',
+    message: 'Today will rain with metal',
   },
   {
     id: 2,
-    title: 'Clatite',
-    imageUrl: '../../images/clatite.jpg',
+    title: 'Bodybuilding',
+    message: 'Nicusor is the best!',
   },
   {
     id: 3,
-    title: 'Eclere',
-    imageUrl: '../../images/eclere.jpg',
+    title: 'Coocking Chef',
+    message: 'Denisa won world chefs championship',
   },
   {
     id: 4,
-    title: 'Tort',
-    imageUrl: '../../images/tort.jpg',
+    title: 'Tech news',
+    message: 'IoghiStudio #1! on leaderboard',
   },
+  
+
 ];
 
 export const App: React.FC = () => {
   const [signIn, setSignIn] = useState(true);
   const [signInPressed, setSignInPressed] = useState(false);
   const [username, setUsername] = useState('');
-  const [recipes] = useState(posts);
+  const [newPosts] = useState(posts);
 
   return (
     <div className='app'>
       <header className='header'>
-        <img src="../../images" alt="" />
-
         <div className='header__input'>
           <label htmlFor="searchField">
             Search: 
@@ -102,14 +102,14 @@ export const App: React.FC = () => {
               Top Daily Recipes
             </h1>
 
-            <div className='recipeList'>
-              {recipes.map(recipe => (
+            <div className='postList'>
+              {newPosts.map(post => (
                 <div
-                  className='recipeItem'
-                  key={recipe.id}
+                  className='postItem'
+                  key={post.id}
                 >
-                  <h2>{recipe.title}</h2>
-                  <img src='../../images/eclere.jpg' alt={'' + recipe.id} />
+                  <h2>{post.title}</h2>
+                  <p>{post.message}</p>
                 </div>
               ))}
             </div>
