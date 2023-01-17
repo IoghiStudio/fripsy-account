@@ -51,7 +51,6 @@ export const App: React.FC = () => {
     })
   }
 
-
   return (
     <div className='app'>
       <header className='header'>
