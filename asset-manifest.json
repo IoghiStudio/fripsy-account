@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/fripsy-account/static/css/main.abcab262.css",
+    "main.js": "/fripsy-account/static/js/main.06f47e6b.js",
+    "static/js/787.3288b703.chunk.js": "/fripsy-account/static/js/787.3288b703.chunk.js",
+    "index.html": "/fripsy-account/index.html",
+    "main.abcab262.css.map": "/fripsy-account/static/css/main.abcab262.css.map",
+    "main.06f47e6b.js.map": "/fripsy-account/static/js/main.06f47e6b.js.map",
+    "787.3288b703.chunk.js.map": "/fripsy-account/static/js/787.3288b703.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.abcab262.css",
+    "static/js/main.06f47e6b.js"
+  ]
+}
